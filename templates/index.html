@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Para Miranda</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="hearts" id="hearts"></div>
+
+  <main class="wrap">
+    <section class="card">
+      <h1>Para <span class="shine">{{ nombre }}</span> 💖</h1>
+      <p class="sub">Una página hecha solo para ti. Cada clic cambia el mensaje.</p>
+
+      <div class="box">
+        <div class="title">Mensaje</div>
+        <div class="text" id="mensaje"></div>
+      </div>
+
+      <div class="box">
+        <div class="title">Recuerdo</div>
+        <div class="text" id="recuerdo"></div>
+      </div>
+
+      <div class="buttons">
+        <button id="btn">Cambiar 💕</button>
+        <button id="btn2" class="ghost">Sorpresa ✨</button>
+      </div>
+
+      <div class="box">
+        <div class="title">Nuestro tiempo juntos 💞</div>
+        <div class="text" id="contador"></div>
+      </div>
+
+      <div class="secret">
+        <input id="clave" type="password" placeholder="Escribe la clave secreta..." />
+        <button id="btnSecret" class="ghost">Abrir 💌</button>
+      </div>
+
+      <div class="box" id="cartaBox" style="display:none;">
+        <div class="title">Carta secreta 💌</div>
+        <div class="text" id="carta"></div>
+      </div>
+
+      <footer class="footer">Con amor, {{ tu_nombre }} • {{ fecha }}</footer>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
